@@ -1,0 +1,56 @@
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+*.egg
+dist/
+build/
+*.so
+
+
+# Environnements virtuels
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+env/
+.env/
+
+# ── Secrets & Config ──────────────────────────────────────────────────
+.env
+backend/.env
+# Ne PAS ignorer .env.example — il est volontairement commité
+
+# ── Données runtime (générées automatiquement) ────────────────────────
+backend/data/
+**/data/*.db
+**/data/chroma/
+
+# Fichiers uploadés / stockage local temporaire
+backend/storage/temp/
+
+# ── Frontend ──────────────────────────────────────────────────────────
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ── IDE & OS ──────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Docker ────────────────────────────────────────────────────────────
+# (on garde docker-compose.yml, mais pas les volumes locaux)
+
+# ── Logs ──────────────────────────────────────────────────────────────
+*.log
+logs/
+
+# ── Alembic ───────────────────────────────────────────────────────────
+# Garder les fichiers de migration, mais pas les bases

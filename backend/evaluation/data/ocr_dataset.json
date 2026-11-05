@@ -1,0 +1,68 @@
+[
+  {
+    "image_path": "evaluation/data/images/58d857bc-3b61-4842-9a64-f788690bd8c5.jpeg",
+    "ground_truth": "TD1 : Suite:\nExo6:\n1)\nG = Ic / Io = 957.\nExo7:\n2/ d = 14 - 2 = 12\n3/ on a d_total = 15 - 0 = 15\nG(2) = 0 => 2x + B = 0\nG(14) = 15 => 14x + B = 15\n=> B = -2x\n=> 14x - 2x = 15 => x = 15/12\nAlors G(t) = 15/12 * t - 15/6  Rehaussement d'image.\n5/5 G(0) = 0\nG(100) = 15 => alpha = 15/100 = 3/20\n=> G(cr) = 3/20 * cr\nT = 2 * Ic / Io = A - (13+12+11)*2 + (9+4)*3 / 7*7*4 = 9.43",
+    "engine_expected": "paddle",
+    "notes": "Handwritten math notes (TD1 - image processing). Contains tables, bar charts, and handwritten formulas."
+  },
+  {
+    "image_path": "evaluation/data/images/Capture d'écran du 2026-05-12 18-37-24.png",
+    "ground_truth": "BULLETIN DE PAIE 2025\nNom: Tazi | Prénom: Youssra\nN° Matricule: BT19906\nSituation familiale: CELIBATAIRE\nFonction: Assistante\nAdresse: 12 rue fez, Casa\nN° d'enfants: 0\nHEURES DE TRAVAIL | 200 | Taux: 7.69\nSALAIRE DE BASE | 26 | 160.00 | Gains: 4 160.00\nPRIME D'ANCIENNETE | -\nSOLDE CONGE PAYE | -\nSALAIRE BRUT | 4 160.00\nCOTISATION CNSS | 4 160.00 | 4 160.00 | 4.48% | 186.37\nCOTISATION AMO | 4 160.00 | 4 160.00 | 2.26% | 94.02\nINDEMNITE DE PERTE EMPLOI | 4 160.00 | 4 160.00 | 0.19% | 7.90\nFRAIS PROFESSIONNELS | 4 160.00 | 4 160.00 | 20.00% | 832.00\nSALAIRE NET IMPOSABLE | 3 039.71\nIR BRUT | 53.97\nCHARGE DE FAMILLE | -\nIR NET | 53.97\nTotal Gains: 4 160.00 | Total Retenues: 342.26\nNet a payer: 3 817.74",
+    "engine_expected": "paddle",
+    "notes": "Screenshot of a payslip (bulletin de paie). Structured tabular printed text."
+  },
+  {
+    "image_path": "evaluation/data/images/Capture d'écran du 2026-05-14 03-16-34.png",
+    "ground_truth": "(En-tête de la société)\n(Nom, prénom du salarié)\n(Adresse)\nLettre recommandée avec accusé de réception.\nÀ (lieu), le (date).\nObjet : notification de votre licenciement\nMadame/Monsieur (nom du salarié),\nVous êtes l'auteur d'un fait de (décrire précisément les éléments constituant la faute professionnelle) qui s'est déroulé le (date de la faute et le lieu). Nous vous avons convoqué pour un entretien préalable à un licenciement éventuel, dans nos locaux, le (date de l'entretien préalable), afin de vous exposer nos remarques et d'entendre vos explications et votre version des faits.\nSuite à cet entretien, nous avons estimé que vos explications n'atténuaient pas notre regard concernant la gravité des faits. Ils constituent à nos yeux un manquement inacceptable à vos fonctions et obligations dans notre société. Nous ne pouvons donc plus vous y maintenir comme salarié.\nPar conséquent, nous avons le regret de vous informer de votre licenciement pour faute grave. Il prend effet, sans préavis, à la date de présentation de ce courrier.\nVous ne pourrez pas prétendre à des indemnités de licenciement.\nMerci de vous présenter dans nos locaux pour recevoir les documents suivants :\n• Bulletin de paie\n• Attestation Pole Emploi\n• Solde de tout compte qu'il vous faudra signer\nNous vous prions d'agréer, Madame/Monsieur (nom du salarié), l'expression de nos salutations respectueuses.\n(Signature du représentant légal de la société)",
+    "engine_expected": "paddle",
+    "notes": "Screenshot of a dismissal letter template (lettre de licenciement). Clean printed text."
+  },
+  {
+    "image_path": "evaluation/data/images/image1.jpeg",
+    "ground_truth": "Mes différentes expériences m'ont permis de me familiariser avec les diversités du monde professionnel. Auprès d'équipes pluri-professionnelles j'ai développé la communication et l'entraide nécessaires au travail en équipe, tout en améliorant mon écoute active et ma bienveillance au contact d'un public varié.\nForte de 5 années dans le soin esthétique et du bien-être, j'ai acquis la résistance et la rigueur demandées. Je suis accoutumée aux grandes journées et au travail les week-ends, les jours fériés et de nuit.",
+    "engine_expected": "paddle",
+    "notes": "Handwritten cursive French text — CV/cover letter excerpt. Handwriting heuristic should flag this for potential fallback."
+  },
+  {
+    "image_path": "evaluation/data/images/images.jpeg",
+    "ground_truth": "2D SHAPES\nNAME | SHAPE | AREA\nSquare | | S²\nRectangle | | bh\nParallelogram | | bh\nTrapezoid | | (a+b)h/2\nTriangle | | 1/2 × bh\nCircle | | πr²\nEllipse | | πab",
+    "engine_expected": "paddle",
+    "notes": "Educational reference chart of 2D shapes and area formulas. Mixed text and geometric diagrams."
+  },
+  {
+    "image_path": "evaluation/data/images/images.png",
+    "ground_truth": "(a+b)² = a² + 2ab + b²\n(a-b)² = a² - 2ab + b²\na² - b² = (a+b)(a-b)\n(a+b)³ = a³ + 3a²b + 3ab² + b³\n(a-b)³ = a³ - 3a²b + 3ab² - b³\na³ + b³ = (a+b)(a² - ab + b²)\na³ - b³ = (a-b)(a² + ab + b²)",
+    "engine_expected": "pix2tex",
+    "notes": "Handwritten algebraic identities (identités remarquables). Formula-dense image — pix2tex/LatexOCR preferred."
+  },
+  {
+    "image_path": "evaluation/data/images/Sans titre.jpeg",
+    "ground_truth": "Jour 12\nChaque moment où j'ai un crayon à la main, je m'éteins et je m'allume en même temps. Dans ma tête, un silence se crée pendant que je me connecte à mes idées. La mine glisse dans un ballet d'encre chorégraphié. Je paraphrase le monde qui m'entoure ; il s'évapore alors que son esquisse apparaît sur ma feuille.\nFLEUR de textes",
+    "engine_expected": "paddle",
+    "notes": "Handwritten creative writing / journal entry in French (Jour 12). Cursive script, French language config for Tesseract."
+  },
+  {
+    "image_path": "evaluation/data/images/Sans titre.png",
+    "ground_truth": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "engine_expected": "pix2tex",
+    "notes": "Clean printed image of the quadratic formula. Pure mathematical formula — ideal test case for pix2tex/LatexOCR."
+  },
+  {
+    "image_path": "evaluation/data/images/WhatsApp Image 2026-03-02 at 5.35.38 AM.jpeg",
+    "ground_truth": "Cyberdroit et régulation du numérique\nRGPD et protection | Protection dès conception | Innovation vs conformité | Cybercriminalité et droit | Propriété intellectuelle\nExercice 1\nUne entreprise européenne développe un système d'intelligence artificielle destiné à analyser le comportement des utilisateurs sur une plateforme en ligne afin de personnaliser les contenus et d'optimiser les performances commerciales. Pour améliorer son algorithme, elle collecte un grand volume de données personnelles, active par défaut tous les paramètres de suivi et ne prévoit ni information claire des utilisateurs ni contrôle humain sur certaines décisions automatisées. L'entreprise estime que ces choix relèvent uniquement de considérations techniques et commerciales.\n① Le volume important de données collectées est-il compatible avec les principes du RGPD ?\n② L'activation par défaut des paramètres de suivi est-elle conforme au principe de privacy by default ?\n③ L'absence d'information claire des utilisateurs pose-t-elle un problème juridique ? Pourquoi ?\n④ L'absence de contrôle humain dans les décisions automatisées présente-t-elle un risque au regard du droit applicable ? Expliquez.",
+    "engine_expected": "paddle",
+    "notes": "Photo of a projected classroom slide (Cyberdroit / RGPD). Slight distortion from photography but text is readable."
+  },
+  {
+    "image_path": "evaluation/data/images/WhatsApp Image 2026-04-22 at 9.34.44 AM.jpeg",
+    "ground_truth": "1/ Donner les champs d'app des dispositions de la loi 65-99\n2/ Donner les conditions de validité du contrat\n3/ Donner 3 essentiels éléments caractérisant le contrat de travail\n4/ Donner l'importance du contrat de travail pour : l'employeur / l'employé (de type)\n5/ Donner un exemple de contrat de travail ; Donner ses Avantages et Limites\n6/ Donner les modes de résiliation d'un contrat de travail\n7/ Donner les effets du licenciement abusif pour l'employeur\n8/ Donner l'utilité et le contenu du \"Solde de tout compte\"\n9/ Donner les composantes minimales du salaire au Maroc\n10/ Donner la différence entre : Contrat du travail / Convention collective du travail",
+    "engine_expected": "paddle",
+    "notes": "Handwritten list of questions on Moroccan labor law (droit du travail, loi 65-99). Legible handwriting."
+  },
+  {
+    "image_path": "evaluation/data/images/WhatsApp Image 2026-04-30 at 2.49.57 PM.jpeg",
+    "ground_truth": "Argumentative writing\nShould colleges limit the use of AI tools in first-year writing courses?\nArtificial intelligence tools are becoming common in college classrooms, especially in writing courses. While these tools can support brainstorming and editing, colleges should limit their use in first-year writing courses because early writing instruction is meant to build core skills, not replace them.\nFirst-year writing courses focus on fundamentals. Students learn how to form arguments, develop a thesis, organize ideas, and revise their own work. When AI tools generate sentences or entire drafts, students risk skipping the learning process that these courses are designed to teach. Writing is not only about producing a final paper; it is about thinking through ideas, struggling with structure, and learning how to communicate clearly. Heavy reliance on AI can weaken that process before students have built a strong foundation.\nAnother concern is academic integrity. Many first-year students are still adjusting to college expectations and may not fully understand where assistance crosses into misconduct. Without clear limits, AI tools blur the line between support and substitution. This creates confusion for students and makes fair assessment difficult for instructors. Limiting AI use helps maintain consistent standards while students learn what independent academic work looks like.\nSome argue that banning or limiting AI ignores the reality that these tools will be part of students' future careers. That point has merit. However, limits do not mean prohibition. Colleges can allow controlled use, such as idea generation or grammar checks, while requiring students to write drafts independently. This approach teaches responsible use rather than dependency.\nIn the end, first-year writing courses should prioritize skill development over convenience. By setting clear limits on AI tools, colleges protect the purpose of these courses while still preparing students to engage with technology thoughtfully later in their academic careers.\nhttps://essayservice.com/blog/argumentative-essay-examples",
+    "engine_expected": "paddle",
+    "notes": "Photo of a printed argumentative essay on paper. Slight perspective distortion, multi-paragraph dense text."
+  }
+]

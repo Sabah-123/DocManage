@@ -1,0 +1,157 @@
+[
+  {
+    "id": 1,
+    "category": "classification_groq_standard",
+    "text": "BULLETIN DE PAIE 2025\nNom: Tazi Youssra | N° Matricule: BT19906\nSALAIRE DE BASE: 4 160,00 DH\nCOTISATION CNSS: 4.48% | AMO: 2.26%\nNet à payer: 3 817,74 DH",
+    "notes": "Document professionnel avec chiffres et sigles RH. Teste la classification sur un texte non-académique. confidence attendue > 0.7.",
+    "subject": "Économie",
+    "doc_type": "Formulaire",
+    "language": "fr"
+  },
+  {
+    "id": 2,
+    "category": "classification_groq_standard",
+    "text": "Lettre recommandée avec accusé de réception.\nObjet : notification de votre licenciement pour faute grave.\nVous ne pourrez pas prétendre à des indemnités de licenciement.\nDocuments à remettre : bulletin de paie, attestation Pôle Emploi, solde de tout compte.",
+    "notes": "Lettre de licenciement. Vérifie que doc_type='Contrat' est retourné (présent dans DOC_TYPES). Pas 'Rapport' ni 'Autre'.",
+    "subject": "Économie",
+    "doc_type": "Contrat",
+    "language": "fr"
+  },
+  {
+    "id": 3,
+    "category": "classification_groq_standard",
+    "text": "Cyberdroit et régulation du numérique.\nExercice 1 : Une entreprise collecte des données personnelles sans information claire des utilisateurs.\nQuelle est la conformité au RGPD ? L'activation par défaut des paramètres de suivi est-elle légale ?",
+    "notes": "Texte juridique/informatique hybride. Teste la capacité à prioriser Informatique vs Économie vs Autre.",
+    "subject": "Informatique",
+    "doc_type": "Exercice",
+    "language": "fr"
+  },
+  {
+    "id": 4,
+    "category": "classification_groq_standard",
+    "text": "Argumentative writing\nShould colleges limit the use of AI tools in first-year writing courses?\nFirst-year writing courses focus on fundamentals. Students learn how to form arguments, develop a thesis, and revise their own work.",
+    "notes": "Texte en anglais. Teste la détection de langue (expected_language='en') et la classification sur un texte éducatif anglophone.",
+    "subject": "Langues",
+    "doc_type": "Cours",
+    "language": "en"
+  },
+  {
+    "id": 5,
+    "category": "classification_groq_standard",
+    "text": "Mes différentes expériences m'ont permis de me familiariser avec les diversités du monde professionnel. Auprès d'équipes pluri-professionnelles j'ai développé la communication et l'entraide. Forte de 5 années dans le soin esthétique et du bien-être.",
+    "notes": "Extrait de CV/lettre de motivation. Aucun sujet académique précis. Teste que subject='Autre' est retourné quand aucune matière ne correspond clairement.",
+    "subject": "Autre",
+    "doc_type": "Rapport",
+    "language": "fr"
+  },
+  {
+    "id": 6,
+    "category": "classification_groq_standard",
+    "text": "(a+b)² = a² + 2ab + b²\n(a-b)² = a² - 2ab + b²\na² - b² = (a+b)(a-b)\n(a+b)³ = a³ + 3a²b + 3ab² + b³\nx = (-b ± √(b²-4ac)) / 2a",
+    "notes": "Texte quasi-exclusivement composé de formules. Teste la robustesse sur un texte sans phrases naturelles. langdetect peut échouer → fallback 'fr'.",
+    "subject": "Mathématiques",
+    "doc_type": "Résumé",
+    "language": "fr"
+  },
+  {
+    "id": 7,
+    "category": "classification_groq_standard",
+    "text": "1/ Donner les champs d'application des dispositions de la loi 65-99\n2/ Donner les conditions de validité du contrat\n3/ Donner 3 éléments essentiels caractérisant le contrat de travail\n4/ Donner les modes de résiliation d'un contrat de travail",
+    "notes": "Questions sur le droit du travail marocain (loi 65-99). Vérifie que doc_type='Exercice' est détecté grâce à la liste numérotée de questions.",
+    "subject": "Économie",
+    "doc_type": "Exercice",
+    "language": "fr"
+  },
+  {
+    "id": 8,
+    "category": "texte_vide",
+    "text": "",
+    "expected_confidence": 0.0,
+    "notes": "Texte vide → retour immédiat avant appel Groq. Teste le guard clause en début de classify_document(). confidence DOIT être 0.0.",
+    "subject": "Autre",
+    "doc_type": "Autre",
+    "language": "fr"
+  },
+  {
+    "id": 9,
+    "category": "texte_vide",
+    "text": "   \n\n\t  ",
+    "expected_confidence": 0.0,
+    "notes": "Texte uniquement whitespace. Après .strip() = '' → même comportement que texte vide. Teste que strip() est bien appliqué.",
+    "subject": "Autre",
+    "doc_type": "Autre",
+    "language": "fr"
+  },
+  {
+    "id": 10,
+    "category": "fallback_keyword",
+    "text": "Cours de thermodynamique. Énergie cinétique et potentielle. Loi de conservation de l'énergie. Force et accélération dans un champ gravitationnel.",
+    "notes": "Cas de test pour _keyword_classify(). Mots-clés 'énergie', 'force', 'accélération' → Physique. 'cours', 'définition' → Cours. confidence max 0.6.",
+    "subject": "Physique",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 11,
+    "category": "fallback_keyword",
+    "text": "TD de chimie organique. Exercice 1 : Identifier les molécules carbonées. Exercice 2 : Équilibrer les réactions d'oxydation. Problème : calculer la masse molaire de l'acide acétique.",
+    "notes": "Mots-clés 'molécule', 'réaction', 'oxydation', 'acide' → Chimie. 'exercice', 'calculer', 'td' → Exercice. Bon cas de test pour le scoring keyword.",
+    "subject": "Chimie",
+    "doc_type": "Exercice",
+    "language": "fr"
+  },
+  {
+    "id": 12,
+    "category": "fallback_keyword",
+    "text": "Résumé du cours : L'ADN est le support de l'information génétique. La cellule eucaryote contient un noyau. Les protéines sont synthétisées par les ribosomes. Points clés : évolution et sélection naturelle.",
+    "notes": "Mots-clés 'adn', 'cellule', 'protéine', 'évolution' → Biologie. 'résumé', 'points clés', 'fiche' → Résumé.",
+    "subject": "Biologie",
+    "doc_type": "Résumé",
+    "language": "fr"
+  },
+  {
+    "id": 13,
+    "category": "validation_subject_invalide",
+    "text": "Ce document traite de la géographie politique et des frontières nationales. Cartographie et géopolitique mondiale.",
+    "notes": "Groq peut retourner 'Géographie' qui n'est PAS dans SUBJECTS → doit être remappé à 'Autre'. Teste la validation stricte `if subject not in SUBJECTS`.",
+    "subject": "Autre",
+    "doc_type": "Autre",
+    "language": "fr"
+  },
+  {
+    "id": 14,
+    "category": "validation_subject_invalide",
+    "text": "Droit civil et procédure pénale. Les contrats synallagmatiques. Responsabilité délictuelle et quasi-délictuelle. Jurisprudence de la Cour de cassation.",
+    "notes": "Groq peut retourner 'Droit' qui n'est pas dans SUBJECTS → fallback 'Autre'. Cas important car DocManager traite des docs juridiques.",
+    "subject": "Autre",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 20,
+    "category": "detection_langue",
+    "text": "2D Shapes. Area formulas for common shapes. Square: S². Rectangle: bh. Triangle: half base times height. Circle: pi r squared.",
+    "notes": "Texte entièrement en anglais. langdetect doit retourner 'en'. Vérifie que le mapping {'en': 'en'} fonctionne correctement.",
+    "subject": "Mathématiques",
+    "doc_type": "Cours",
+    "language": "en"
+  },
+  {
+    "id": 21,
+    "category": "detection_langue",
+    "text": "Jour 12. Chaque moment où j'ai un crayon à la main, je m'éteins et je m'allume. La mine glisse dans un ballet d'encre chorégraphié. FLEUR de textes.",
+    "notes": "Texte littéraire français (journal créatif). Teste que langdetect détecte 'fr' et que le sujet 'Langues' est retourné pour un texte de creative writing.",
+    "subject": "Langues",
+    "doc_type": "Autre",
+    "language": "fr"
+  },
+  {
+    "id": 22,
+    "category": "nettoyage_markdown",
+    "text": "Examen de Biologie. Durée 2h. Barème 20 points. Partie 1 : Structure cellulaire. Partie 2 : ADN et réplication. Partie 3 : Évolution des espèces.",
+    "notes": "Teste que re.sub(r'```json\\s*|\\s*```', '', raw) fonctionne si Groq retourne le JSON entouré de balises markdown. Le résultat final doit rester valide.",
+    "subject": "Biologie",
+    "doc_type": "Examen",
+    "language": "fr"
+  }
+]

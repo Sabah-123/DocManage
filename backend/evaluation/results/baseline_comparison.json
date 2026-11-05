@@ -1,0 +1,78 @@
+{
+  "ocr": {
+    "baseline": {
+      "n": 9,
+      "CER_mean": 0.654,
+      "WER_mean": 0.9332,
+      "Accuracy_mean": 0.3553,
+      "latency": {
+        "n": 9,
+        "min_ms": 173.23,
+        "max_ms": 4042.14,
+        "mean_ms": 1243.06,
+        "median_ms": 398.51,
+        "p95_ms": 4042.14,
+        "stdev_ms": 1403.87
+      }
+    },
+    "current": {
+      "n": 9,
+      "CER_mean": 0.5274,
+      "WER_mean": 0.7881,
+      "Accuracy_mean": 0.4762,
+      "latency": {
+        "n": 9,
+        "min_ms": 188.64,
+        "max_ms": 7966.46,
+        "mean_ms": 2423.41,
+        "median_ms": 1183.09,
+        "p95_ms": 7966.46,
+        "stdev_ms": 2562.01
+      }
+    }
+  },
+  "classification": {
+    "baseline": {
+      "subject": {
+        "accuracy": 0.5294,
+        "macro_f1": 0.4445,
+        "weighted_f1": 0.3987
+      },
+      "doc_type": {
+        "accuracy": 0.5882,
+        "macro_f1": 0.4583,
+        "weighted_f1": 0.5608
+      },
+      "latency": {
+        "n": 17,
+        "min_ms": 0.04,
+        "max_ms": 23.38,
+        "mean_ms": 1.45,
+        "median_ms": 0.06,
+        "p95_ms": 23.38,
+        "stdev_ms": 5.65
+      }
+    },
+    "current": {
+      "subject": {
+        "accuracy": 1.0,
+        "macro_f1": 1.0,
+        "weighted_f1": 1.0
+      },
+      "doc_type": {
+        "accuracy": 0.6471,
+        "macro_f1": 0.419,
+        "weighted_f1": 0.605
+      },
+      "latency": {
+        "n": 17,
+        "min_ms": 0.03,
+        "max_ms": 512.42,
+        "mean_ms": 298.7,
+        "median_ms": 306.93,
+        "p95_ms": 512.42,
+        "stdev_ms": 137.75
+      }
+    }
+  }
+}

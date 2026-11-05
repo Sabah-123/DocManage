@@ -1,0 +1,138 @@
+{
+  "n_docs": 9,
+  "global_metrics": {
+    "CER_mean": 0.5274,
+    "WER_mean": 0.7881,
+    "Accuracy_mean": 0.4762
+  },
+  "latency_global_ms": {
+    "n": 9,
+    "min_ms": 166.31,
+    "max_ms": 14698.52,
+    "mean_ms": 2977.52,
+    "median_ms": 1170.54,
+    "p95_ms": 14698.52,
+    "stdev_ms": 4584.74
+  },
+  "latency_by_engine_ms": {
+    "paddle": {
+      "n": 9,
+      "min_ms": 166.31,
+      "max_ms": 14698.52,
+      "mean_ms": 2977.52,
+      "median_ms": 1170.54,
+      "p95_ms": 14698.52,
+      "stdev_ms": 4584.74
+    }
+  },
+  "samples": [
+    {
+      "id": 1,
+      "file": "58d857bc-3b61-4842-9a64-f788690bd8c5.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 1.0325,
+      "WER": 0.9725,
+      "Accuracy": 0.0,
+      "latency_ms": 14698.52,
+      "gt_chars": 370,
+      "hyp_chars": 502
+    },
+    {
+      "id": 4,
+      "file": "image1.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.5618,
+      "WER": 0.9487,
+      "Accuracy": 0.4382,
+      "latency_ms": 1170.54,
+      "gt_chars": 518,
+      "hyp_chars": 273
+    },
+    {
+      "id": 5,
+      "file": "images.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.3631,
+      "WER": 0.6216,
+      "Accuracy": 0.6369,
+      "latency_ms": 794.72,
+      "gt_chars": 157,
+      "hyp_chars": 105
+    },
+    {
+      "id": 6,
+      "file": "images.png",
+      "engine_used": "paddle",
+      "engine_expected": "pix2tex",
+      "CER": 0.3404,
+      "WER": 0.9455,
+      "Accuracy": 0.6596,
+      "latency_ms": 415.73,
+      "gt_chars": 188,
+      "hyp_chars": 141
+    },
+    {
+      "id": 7,
+      "file": "Sans titre.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.5766,
+      "WER": 0.9355,
+      "Accuracy": 0.4234,
+      "latency_ms": 359.77,
+      "gt_chars": 333,
+      "hyp_chars": 151
+    },
+    {
+      "id": 8,
+      "file": "Sans titre.png",
+      "engine_used": "paddle",
+      "engine_expected": "pix2tex",
+      "CER": 0.7632,
+      "WER": 1.0,
+      "Accuracy": 0.2368,
+      "latency_ms": 166.31,
+      "gt_chars": 38,
+      "hyp_chars": 15
+    },
+    {
+      "id": 9,
+      "file": "WhatsApp Image 2026-03-02 at 5.35.38 AM.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.1195,
+      "WER": 0.3133,
+      "Accuracy": 0.8805,
+      "latency_ms": 4022.27,
+      "gt_chars": 1180,
+      "hyp_chars": 1156
+    },
+    {
+      "id": 10,
+      "file": "WhatsApp Image 2026-04-22 at 9.34.44 AM.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.7368,
+      "WER": 1.0,
+      "Accuracy": 0.2632,
+      "latency_ms": 2464.91,
+      "gt_chars": 661,
+      "hyp_chars": 263
+    },
+    {
+      "id": 11,
+      "file": "WhatsApp Image 2026-04-30 at 2.49.57 PM.jpeg",
+      "engine_used": "paddle",
+      "engine_expected": "paddle",
+      "CER": 0.2528,
+      "WER": 0.3555,
+      "Accuracy": 0.7472,
+      "latency_ms": 2704.89,
+      "gt_chars": 2112,
+      "hyp_chars": 1591
+    }
+  ]
+}

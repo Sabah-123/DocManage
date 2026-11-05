@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "category": "recherche_semantique_basique",
+    "question": "Quel est le salaire net à payer de Youssra Tazi ?",
+    "relevant_doc_ids": [2],
+    "reference_answer": "Le salaire net à payer de Youssra Tazi est de 3 817,74 DH. Le salaire brut est de 4 160,00 DH avec des retenues totales de 342,26 DH (CNSS 186,37, AMO 94,02, IPE 7,90, IR NET 53,97).",
+    "notes": "Teste la recherche sur un document tabulaire (bulletin de paie). Vérifie que les chiffres sont bien extraits depuis le contexte OCR."
+  },
+  {
+    "id": 2,
+    "category": "recherche_semantique_basique",
+    "question": "Quelles sont les questions posées sur le RGPD dans le cours de cyberdroit ?",
+    "relevant_doc_ids": [9],
+    "reference_answer": "Les 4 questions portent sur : la compatibilité du volume de données avec les principes du RGPD, la conformité de l'activation par défaut des paramètres de suivi avec le privacy by default, le problème juridique de l'absence d'information claire, et le risque lié à l'absence de contrôle humain dans les décisions automatisées.",
+    "notes": "Teste la recherche sur un document image (photo de slide). Le contexte doc_context doit mentionner IMAGE et OCR."
+  },
+  {
+    "id": 3,
+    "category": "question_multi_documents",
+    "question": "Quels documents concernent le droit du travail marocain ?",
+    "relevant_doc_ids": [2, 3, 10],
+    "reference_answer": "Trois documents traitent du droit du travail : le bulletin de paie (salaire, cotisations), la lettre de licenciement (procédure de rupture de contrat), et les questions manuscrites sur la loi 65-99 (contrat de travail, résiliation, licenciement abusif).",
+    "notes": "Teste la recherche cross-documents sans filtre document_id (where_filter = None). Vérifie que le RAG agrège bien plusieurs sources."
+  },
+  {
+    "id": 4,
+    "category": "detection_resume",
+    "question": "Résume le contenu de la lettre de licenciement.",
+    "relevant_doc_ids": [3],
+    "reference_answer": "La lettre notifie un licenciement pour faute grave, sans préavis ni indemnités. Elle fait suite à un entretien préalable, expose les manquements du salarié, et liste les documents à récupérer : bulletin de paie, attestation Pôle Emploi, solde de tout compte.",
+    "notes": "Teste la détection du mot-clé 'résume' → actual_top_k doit passer à 10 au lieu de 4. Cas critique pour vérifier la logique de résumé."
+  },
+  {
+    "id": 5,
+    "category": "detection_resume",
+    "question": "Fais une synthèse des formules algébriques présentes dans les documents.",
+    "relevant_doc_ids": [6, 8],
+    "reference_answer": "Les formules présentes incluent les identités remarquables (a+b)², (a-b)², a²-b², (a+b)³, (a-b)³, a³+b³, a³-b³, ainsi que la formule quadratique x = (-b ± √(b²-4ac)) / 2a.",
+    "notes": "Teste 'synthèse' comme déclencheur de top_k=10. Implique des documents à moteur pix2tex (formules mathématiques)."
+  },
+  {
+    "id": 6,
+    "category": "filtre_par_document",
+    "question": "Quels sont les taux de cotisation sociale appliqués ?",
+    "relevant_doc_ids": [2],
+    "reference_answer": "Les taux de cotisation sont : CNSS 4,48%, AMO 2,26%, Indemnité de Perte d'Emploi 0,19%, Frais professionnels 20,00%.",
+    "notes": "Doit être exécuté avec document_id=2 pour tester le filtre where={'sql_doc_id': '2'}. Vérifie que les autres documents ne polluent pas la réponse."
+  },
+  {
+    "id": 7,
+    "category": "filtre_par_document",
+    "question": "Quelles sont les aires des formes géométriques 2D listées ?",
+    "relevant_doc_ids": [5],
+    "reference_answer": "Les aires sont : Carré S², Rectangle bh, Parallélogramme bh, Trapèze (a+b)h/2, Triangle ½×bh, Cercle πr², Ellipse πab.",
+    "notes": "Doit être exécuté avec document_id=5. Teste la récupération d'un document éducatif mixte (texte + formes géométriques)."
+  },
+  {
+    "id": 8,
+    "category": "contexte_image_ocr",
+    "question": "Quel est le texte du journal manuscrit Jour 12 ?",
+    "relevant_doc_ids": [7],
+    "reference_answer": "Le texte du Jour 12 décrit le moment d'écriture créative : tenir un crayon, le silence intérieur, la mine qui glisse dans un ballet d'encre chorégraphié, paraphraser le monde. Le texte se conclut par 'FLEUR de textes'.",
+    "notes": "Teste un document image handwritten (file_type=jpeg). Le prompt doit contenir le contexte IMAGE/OCR. Vérifie que le LLM ne répond pas 'je ne peux pas lire une image'."
+  },
+  {
+    "id": 9,
+    "category": "contexte_image_ocr",
+    "question": "Quel est le contenu de l'extrait de lettre de motivation manuscrite ?",
+    "relevant_doc_ids": [4],
+    "reference_answer": "L'auteure mentionne ses expériences dans le soin esthétique et le bien-être (5 ans), ses compétences en communication et travail en équipe, sa résistance et rigueur, et sa disponibilité pour les horaires décalés (week-ends, jours fériés, nuit).",
+    "notes": "Autre cas de document handwritten (image1.jpeg). Teste la robustesse de l'OCR sur l'écriture cursive et la cohérence du contexte fourni au LLM."
+  },
+  {
+    "id": 10,
+    "category": "historique_conversation",
+    "question": "Et pour l'employeur, quelles sont les conséquences ?",
+    "relevant_doc_ids": [10],
+    "reference_answer": "Pour l'employeur, les effets du licenciement abusif peuvent inclure des dommages et intérêts. La loi 65-99 encadre ces situations dans le Code du travail marocain.",
+    "history": "Utilisateur: Quels sont les modes de résiliation d'un contrat de travail ?\nAssistant: Les modes de résiliation incluent la démission, le licenciement, la rupture d'un commun accord, et l'arrivée du terme pour les CDD.",
+    "notes": "Teste l'injection de l'historique dans le prompt (paramètre history). Vérifie que le LLM comprend la référence contextuelle 'Et pour l'employeur'."
+  },
+  {
+    "id": 11,
+    "category": "question_hors_contexte",
+    "question": "Quelle est la capitale de la France ?",
+    "relevant_doc_ids": [],
+    "reference_answer": "Cette information n'est pas présente dans les documents indexés.",
+    "notes": "Teste la robustesse face à une question sans passage pertinent. Le RAG doit retourner 'Aucun passage pertinent trouvé' ou une réponse honnête sur l'absence de contexte."
+  },
+  {
+    "id": 12,
+    "category": "question_ambigue",
+    "question": "Quels sont les champs d'application ?",
+    "relevant_doc_ids": [10],
+    "reference_answer": "Les champs d'application des dispositions de la loi 65-99 (Code du travail marocain) concernent les relations de travail entre employeurs et salariés.",
+    "notes": "Question volontairement vague. Teste si le RAG arrive à désambiguïser grâce au contexte de la collection. Bon indicateur de la qualité des embeddings."
+  }
+]

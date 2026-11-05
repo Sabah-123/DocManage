@@ -1,0 +1,70 @@
+[
+  {
+    "id": 15,
+    "category": "classify_for_user_custom_list",
+    "text": "Chapitre 3 : Algorithmes de tri. Tri rapide, tri fusion, tri par insertion. Complexité temporelle O(n log n). Structures de données : arbres binaires et tables de hachage.",
+    "user_subjects": [
+      "Algorithmique",
+      "Bases de données",
+      "Réseaux",
+      "Autre"
+    ],
+    "notes": "Teste classify_document_for_user() avec liste custom. 'Informatique' n'est PAS dans user_subjects → Groq doit retourner 'Algorithmique' (liste passée en prompt).",
+    "subject": "Algorithmique",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 16,
+    "category": "classify_for_user_custom_list",
+    "text": "Calcul intégral. Théorème fondamental de l'analyse. Intégrales définies et indéfinies. Méthodes d'intégration par parties.",
+    "user_subjects": [
+      "Analyse mathématique",
+      "Algèbre linéaire",
+      "Probabilités",
+      "Autre"
+    ],
+    "notes": "Groq peut retourner 'Mathématiques' → pas dans user_subjects → tentative lower_map → pas de match → fallback 'Autre'. OU Groq retourne directement 'Analyse mathématique'.",
+    "subject": "Analyse mathématique",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 17,
+    "category": "classify_for_user_remapping_casse",
+    "text": "Cours de physique quantique. Principe d'incertitude d'Heisenberg. Dualité onde-corpuscule. Équation de Schrödinger.",
+    "user_subjects": [
+      "physique quantique",
+      "Chimie",
+      "Autre"
+    ],
+    "notes": "Groq peut retourner 'Physique quantique' (majuscule) mais user_subjects contient 'physique quantique' (minuscule). Teste le lower_map remapping insensible à la casse.",
+    "subject": "physique quantique",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 18,
+    "category": "classify_for_user_liste_vide",
+    "text": "Introduction à Python. Les variables et les fonctions. Algorithme de tri rapide. Complexité O(n log n).",
+    "user_subjects": [],
+    "notes": "user_subjects vide → délègue IMMÉDIATEMENT à classify_document() (fallback global). Teste le guard clause `if not user_subjects`.",
+    "subject": "Informatique",
+    "doc_type": "Cours",
+    "language": "fr"
+  },
+  {
+    "id": 19,
+    "category": "classify_for_user_liste_vide",
+    "text": "",
+    "user_subjects": [
+      "Mathématiques",
+      "Physique"
+    ],
+    "expected_confidence": 0.0,
+    "notes": "Texte vide + user_subjects non vide → fallback_subject = dernier élément de la liste ('Physique' ici) OU le premier contenant 'autre'. Teste le guard clause texte vide dans classify_document_for_user().",
+    "subject": "Physique",
+    "doc_type": "Autre",
+    "language": "fr"
+  }
+]

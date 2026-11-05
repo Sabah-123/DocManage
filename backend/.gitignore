@@ -1,0 +1,31 @@
+# Données runtime — JAMAIS commiter
+backend/data/
+**/data/*.db
+**/data/chroma/
+**/.env
+# Pas .env.example — celui-ci est commité volontairement
+venv/
+__pycache__/
+*.pyc
+
+
+# Python - Environnements et cache
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+**/__pycache__/
+*.pyc
+
+# Frontend - Dépendances et build
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+
+# Données et Secrets
+.env
+backend/.env
+backend/data/
+**/data/*.db
+**/data/chroma/

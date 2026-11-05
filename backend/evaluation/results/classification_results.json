@@ -1,0 +1,553 @@
+{
+  "n_docs": 17,
+  "subject_classification": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_precision": 1.0,
+    "weighted_recall": 1.0,
+    "weighted_f1": 1.0,
+    "per_class": {
+      "Autre": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 5
+      },
+      "Biologie": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "Chimie": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "Informatique": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "Langues": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "Mathématiques": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 2
+      },
+      "Physique": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "Économie": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      }
+    },
+    "n_samples": 17
+  },
+  "type_classification": {
+    "accuracy": 0.7059,
+    "macro_precision": 0.4352,
+    "macro_recall": 0.4722,
+    "macro_f1": 0.45,
+    "weighted_precision": 0.6275,
+    "weighted_recall": 0.7059,
+    "weighted_f1": 0.6588,
+    "per_class": {
+      "Autre": {
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
+        "support": 4
+      },
+      "Contrat": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "Cours": {
+        "precision": 0.6667,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 4
+      },
+      "Examen": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 1
+      },
+      "Exercice": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "support": 3
+      },
+      "Facture": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 0
+      },
+      "Formulaire": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "Rapport": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 1
+      },
+      "Résumé": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 2
+      }
+    },
+    "n_samples": 17
+  },
+  "confusion_matrix_subject": {
+    "labels": [
+      "Autre",
+      "Biologie",
+      "Chimie",
+      "Informatique",
+      "Langues",
+      "Mathématiques",
+      "Physique",
+      "Économie"
+    ],
+    "matrix": {
+      "Autre": {
+        "Autre": 5,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Biologie": {
+        "Autre": 0,
+        "Biologie": 2,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Chimie": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 1,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Informatique": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 1,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Langues": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 2,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Mathématiques": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 2,
+        "Physique": 0,
+        "Économie": 0
+      },
+      "Physique": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 1,
+        "Économie": 0
+      },
+      "Économie": {
+        "Autre": 0,
+        "Biologie": 0,
+        "Chimie": 0,
+        "Informatique": 0,
+        "Langues": 0,
+        "Mathématiques": 0,
+        "Physique": 0,
+        "Économie": 3
+      }
+    }
+  },
+  "confusion_matrix_type": {
+    "labels": [
+      "Autre",
+      "Contrat",
+      "Cours",
+      "Examen",
+      "Exercice",
+      "Facture",
+      "Formulaire",
+      "Rapport",
+      "Résumé"
+    ],
+    "matrix": {
+      "Autre": {
+        "Autre": 3,
+        "Contrat": 0,
+        "Cours": 1,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Contrat": {
+        "Autre": 1,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Cours": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 4,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Examen": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 1,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Exercice": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 0,
+        "Exercice": 3,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Facture": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Formulaire": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 1,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 0
+      },
+      "Rapport": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 0,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 1
+      },
+      "Résumé": {
+        "Autre": 0,
+        "Contrat": 0,
+        "Cours": 1,
+        "Examen": 0,
+        "Exercice": 0,
+        "Facture": 0,
+        "Formulaire": 0,
+        "Rapport": 0,
+        "Résumé": 1
+      }
+    }
+  },
+  "latency_ms": {
+    "n": 17,
+    "min_ms": 0.05,
+    "max_ms": 1810.33,
+    "mean_ms": 344.18,
+    "median_ms": 279.69,
+    "p95_ms": 1810.33,
+    "stdev_ms": 392.53
+  },
+  "avg_confidence": 0.7706,
+  "samples": [
+    {
+      "id": 1,
+      "true_subject": "Économie",
+      "pred_subject": "Économie",
+      "subject_ok": true,
+      "true_type": "Formulaire",
+      "pred_type": "Facture",
+      "type_ok": false,
+      "confidence": 0.9,
+      "language": "en",
+      "latency_ms": 1810.33
+    },
+    {
+      "id": 2,
+      "true_subject": "Économie",
+      "pred_subject": "Économie",
+      "subject_ok": true,
+      "true_type": "Contrat",
+      "pred_type": "Autre",
+      "type_ok": false,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 360.69
+    },
+    {
+      "id": 3,
+      "true_subject": "Informatique",
+      "pred_subject": "Informatique",
+      "subject_ok": true,
+      "true_type": "Exercice",
+      "pred_type": "Exercice",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 275.54
+    },
+    {
+      "id": 4,
+      "true_subject": "Langues",
+      "pred_subject": "Langues",
+      "subject_ok": true,
+      "true_type": "Cours",
+      "pred_type": "Cours",
+      "type_ok": true,
+      "confidence": 0.8,
+      "language": "en",
+      "latency_ms": 212.76
+    },
+    {
+      "id": 5,
+      "true_subject": "Autre",
+      "pred_subject": "Autre",
+      "subject_ok": true,
+      "true_type": "Rapport",
+      "pred_type": "Résumé",
+      "type_ok": false,
+      "confidence": 0.8,
+      "language": "fr",
+      "latency_ms": 264.25
+    },
+    {
+      "id": 6,
+      "true_subject": "Mathématiques",
+      "pred_subject": "Mathématiques",
+      "subject_ok": true,
+      "true_type": "Résumé",
+      "pred_type": "Cours",
+      "type_ok": false,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 272.34
+    },
+    {
+      "id": 7,
+      "true_subject": "Économie",
+      "pred_subject": "Économie",
+      "subject_ok": true,
+      "true_type": "Exercice",
+      "pred_type": "Exercice",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 407.58
+    },
+    {
+      "id": 8,
+      "true_subject": "Autre",
+      "pred_subject": "Autre",
+      "subject_ok": true,
+      "true_type": "Autre",
+      "pred_type": "Autre",
+      "type_ok": true,
+      "confidence": 0.0,
+      "language": "fr",
+      "latency_ms": 0.07
+    },
+    {
+      "id": 9,
+      "true_subject": "Autre",
+      "pred_subject": "Autre",
+      "subject_ok": true,
+      "true_type": "Autre",
+      "pred_type": "Autre",
+      "type_ok": true,
+      "confidence": 0.0,
+      "language": "fr",
+      "latency_ms": 0.05
+    },
+    {
+      "id": 10,
+      "true_subject": "Physique",
+      "pred_subject": "Physique",
+      "subject_ok": true,
+      "true_type": "Cours",
+      "pred_type": "Cours",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 304.36
+    },
+    {
+      "id": 11,
+      "true_subject": "Chimie",
+      "pred_subject": "Chimie",
+      "subject_ok": true,
+      "true_type": "Exercice",
+      "pred_type": "Exercice",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 309.97
+    },
+    {
+      "id": 12,
+      "true_subject": "Biologie",
+      "pred_subject": "Biologie",
+      "subject_ok": true,
+      "true_type": "Résumé",
+      "pred_type": "Résumé",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 250.35
+    },
+    {
+      "id": 13,
+      "true_subject": "Autre",
+      "pred_subject": "Autre",
+      "subject_ok": true,
+      "true_type": "Autre",
+      "pred_type": "Cours",
+      "type_ok": false,
+      "confidence": 0.8,
+      "language": "fr",
+      "latency_ms": 279.69
+    },
+    {
+      "id": 14,
+      "true_subject": "Autre",
+      "pred_subject": "Autre",
+      "subject_ok": true,
+      "true_type": "Cours",
+      "pred_type": "Cours",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 289.17
+    },
+    {
+      "id": 15,
+      "true_subject": "Mathématiques",
+      "pred_subject": "Mathématiques",
+      "subject_ok": true,
+      "true_type": "Cours",
+      "pred_type": "Cours",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "en",
+      "latency_ms": 302.18
+    },
+    {
+      "id": 16,
+      "true_subject": "Langues",
+      "pred_subject": "Langues",
+      "subject_ok": true,
+      "true_type": "Autre",
+      "pred_type": "Autre",
+      "type_ok": true,
+      "confidence": 0.8,
+      "language": "fr",
+      "latency_ms": 305.38
+    },
+    {
+      "id": 17,
+      "true_subject": "Biologie",
+      "pred_subject": "Biologie",
+      "subject_ok": true,
+      "true_type": "Examen",
+      "pred_type": "Examen",
+      "type_ok": true,
+      "confidence": 0.9,
+      "language": "fr",
+      "latency_ms": 206.28
+    }
+  ]
+}
